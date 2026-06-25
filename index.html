@@ -1,1 +1,96 @@
-<a href="about.html">About</a> <a href="members.html">Members</a> <a href="gallery.html">Gallery</a> <a href="events.html">Events</a> <a href="notices.html">Notices</a> <a href="contact.html">Contact</a>
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>কনকপুর তরুণ সংঘ</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+}
+
+.topbar{
+  background:#8B0000;
+  color:#fff;
+  padding:15px;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.sidebar{
+  height:100%;
+  width:0;
+  position:fixed;
+  top:0;
+  left:0;
+  background:#222;
+  overflow-x:hidden;
+  transition:0.3s;
+  padding-top:60px;
+}
+
+.sidebar a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+  font-size:20px;
+}
+
+.sidebar a:hover{
+  background:#444;
+}
+
+.closebtn{
+  position:absolute;
+  top:10px;
+  right:20px;
+  font-size:35px;
+}
+
+.main{
+  padding:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar" onclick="openMenu()">☰</div>
+
+<div id="menu" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="members.html">👥 Members</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="events.html">📅 Events</a>
+  <a href="notices.html">📢 Notices</a>
+  <a href="contact.html">📞 Contact</a>
+</div>
+
+<div class="main">
+  <h1>কনকপুর তরুণ সংঘ</h1>
+  <p>ESTD: 1965</p>
+  <p>Registration No: S/2L/2615</p>
+
+  <h2>স্বাগতম</h2>
+  <p>কনকপুর তরুণ সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+</div>
+
+<script>
+function openMenu(){
+  document.getElementById("menu").style.width="250px";
+}
+
+function closeMenu(){
+  document.getElementById("menu").style.width="0";
+}
+</script>
+
+</body>
+</html>
