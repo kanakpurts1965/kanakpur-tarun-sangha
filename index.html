@@ -5,16 +5,185 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>কনকপুর তরুণ সংঘ</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header img{
+    width:120px;
+    border-radius:50%;
+}
+
+nav{
+    background:#8b0000;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+h2{
+    color:#8b0000;
+}
+
+footer{
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:8px;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>কনকপুর তরুণ সংঘ</h1>
+<header>
+    <img src="logo.png" alt="Club Logo">
+    <h1>কনকপুর তরুণ সংঘ</h1>
+    <p>ESTD : 1965</p>
+    <p>Registration No : S/2L/2615</p>
+</header>
 
-<p>প্রতিষ্ঠিত: ১৯৬৫</p>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#committee">Committee</a>
+    <a href="#members">Members</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#events">Events</a>
+    <a href="#notices">Notices</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<p>রেজিস্ট্রেশন নং: S/2L/2615</p>
+<section id="home">
+    <h2>স্বাগতম</h2>
+    <p>কনকপুর তরুণ সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+</section>
 
-<p>কনকপুর তরুণ সংঘের অফিসিয়াল ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+<section id="about">
+    <h2>আমাদের সম্পর্কে</h2>
+    <p>
+    কনকপুর তরুণ সংঘ একটি সমাজসেবামূলক ও সাংস্কৃতিক সংগঠন।
+    সমাজসেবা, রক্তদান, সাংস্কৃতিক অনুষ্ঠান ও বিভিন্ন জনকল্যাণমূলক কাজে
+    আমরা নিয়মিত অংশগ্রহণ করি।
+    </p>
+</section>
+
+<section id="committee">
+    <h2>কমিটি</h2>
+    <ul>
+        <li>সভাপতি - নাম লিখুন</li>
+        <li>সম্পাদক - নাম লিখুন</li>
+        <li>কোষাধ্যক্ষ - নাম লিখুন</li>
+    </ul>
+</section>
+
+<section id="members">
+    <h2>সদস্য তালিকা</h2>
+    <ul>
+        <li>তন্ময় আদক</li>
+        <li>সদস্য ২</li>
+        <li>সদস্য ৩</li>
+    </ul>
+</section>
+
+<section id="gallery">
+    <h2>গ্যালারি</h2>
+
+```
+<div class="gallery">
+    <img src="gallery1.jpg" alt="">
+    <img src="gallery2.jpg" alt="">
+    <img src="gallery3.jpg" alt="">
+</div>
+```
+
+</section>
+
+<section id="events">
+    <h2>Upcoming Events</h2>
+
+```
+<ul>
+    <li>রক্তদান শিবির</li>
+    <li>সাংস্কৃতিক অনুষ্ঠান</li>
+</ul>
+
+<h2>Completed Events</h2>
+
+<ul>
+    <li>বস্ত্র বিতরণ কর্মসূচি</li>
+    <li>স্বাস্থ্য শিবির</li>
+</ul>
+```
+
+</section>
+
+<section id="notices">
+    <h2>Current Notices</h2>
+
+```
+<ul>
+    <li>সাধারণ সভা - রবিবার বিকাল ৪ টা</li>
+</ul>
+
+<h2>Old Notices</h2>
+
+<ul>
+    <li>পুরাতন নোটিশ</li>
+</ul>
+```
+
+</section>
+
+<section id="contact">
+    <h2>যোগাযোগ</h2>
+
+```
+<p>মোবাইল: 6296062310</p>
+<p>Email: kanakpurts1965@gmail.com</p>
+```
+
+</section>
+
+<footer>
+    © 2026 কনকপুর তরুণ সংঘ | All Rights Reserved
+</footer>
 
 </body>
 </html>
