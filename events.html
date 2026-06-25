@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - কনকপুর তরুণ সংঘ</title>
+
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;}
+.topbar{background:#8B0000;color:#fff;padding:15px;font-size:30px;cursor:pointer;}
+.sidebar{position:fixed;left:-260px;top:0;width:250px;height:100%;background:#222;transition:.3s;}
+.sidebar.active{left:0;}
+.sidebar a{display:block;color:#fff;text-decoration:none;padding:15px 20px;}
+.sidebar a:hover{background:#444;}
+.content{padding:20px;}
+</style>
+
+</head>
+<body>
+
+<div class="topbar" onclick="toggleMenu()">☰</div>
+
+<div id="menu" class="sidebar">
+  <a href="index.html">🏠 Home</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="members.html">👥 Members</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="events.html">📅 Events</a>
+  <a href="notices.html">📢 Notices</a>
+  <a href="contact.html">📞 Contact</a>
+</div>
+
+<div class="content">
+  <h1>আমাদের সম্পর্কে</h1>
+  <p>কনকপুর তরুণ সংঘ (ESTD: 1965) একটি সমাজসেবামূলক ও সাংস্কৃতিক সংগঠন।</p>
+  <p>Registration No: S/2L/2615</p>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
