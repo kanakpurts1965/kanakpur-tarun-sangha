@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>কনকপুর তরুণ সংঘ</title>
+<title>কনকপুর তরুণ সংঘ </title>
 
 <style>
 body{
@@ -68,16 +68,105 @@ video{
     width:100%;
     border-radius:10px;
 }
+  /* ===== DARK MODE ===== */
+.dark-mode{
+background:#121212;
+color:#ffffff;
+}
+
+.dark-mode .content{
+background:#121212;
+color:#ffffff;
+}
+
+.dark-mode .sidebar{
+background:#000000;
+}
+
+.dark-mode footer{
+background:#1f1f1f !important;
+color:#ffffff !important;
+}
+
+.dark-mode a{
+color:#ffffff;
+}
+
+/* ===== SLIDE SWITCH ===== */
+.switch{
+margin-left:auto;
+position:relative;
+display:inline-block;
+width:52px;
+height:28px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:#cccccc;
+border-radius:34px;
+cursor:pointer;
+transition:.3s;
+}
+
+.slider:before{
+content:"";
+position:absolute;
+width:20px;
+height:20px;
+left:4px;
+bottom:4px;
+background:#ffffff;
+border-radius:50%;
+transition:.3s;
+}
+
+input:checked + .slider{
+background:#4CAF50;
+}
+
+input:checked + .slider:before{
+transform:translateX(24px);
+}
+  
 </style>
 
 </head>
 
 <body>
 
-<div class="topbar" onclick="toggleMenu()">
-    <span style="font-size:30px;">☰</span>
+<div class="topbar">
+    <span onclick="toggleMenu()" style="font-size:30px;cursor:pointer;">☰</span>
+
+```
+<img src="123.png.png" alt="Logo">
+
+<span class="title">কনকপুর তরুণ সংঘ</span>
+
+<label class="switch">
+    <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+    <span class="slider"></span>
+</label>
+```
+
+</div>
+
     <img src="123.png.png">
-    <span class="title">কনকপুর তরুণ সংঘ</span>
+    <span class="title">কনকপুর তরুণ সংঘ <label class="switch" onclick="event.stopPropagation();">
+    <input type="checkbox"
+           id="darkToggle"
+           onchange="toggleDarkMode()">
+    <span class="slider"></span>
+</label>
+</span>
 </div>
 
 <div id="menu" class="sidebar">
@@ -131,7 +220,36 @@ ESTD: 1965 | Reg. No: S/2L/2615
 </div>
 
 <script>
-function toggleMenu() {
+function toggleMenu()
+    function toggleDarkMode() {
+document.body.classList.toggle("dark-mode");
+
+```
+const isDark = document.body.classList.contains("dark-mode");
+localStorage.setItem("darkMode", isDark);
+
+document.getElementById("darkToggle").checked = isDark;
+```
+
+}
+
+window.addEventListener("load", function () {
+const isDark = localStorage.getItem("darkMode") === "true";
+
+```
+if (isDark) {
+    document.body.classList.add("dark-mode");
+}
+
+const toggle = document.getElementById("darkToggle");
+if (toggle) {
+    toggle.checked = isDark;
+}
+```
+
+});
+
+{
     document.getElementById("menu").classList.toggle("active");
 }
 </script>
