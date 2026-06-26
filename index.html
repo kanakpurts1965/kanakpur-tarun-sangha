@@ -144,12 +144,18 @@ transform:translateX(24px);
 <body>
 
 <div class="topbar">
-    <span onclick="toggleMenu()" style="font-size:30px;cursor:pointer;">☰</span>
+  <span onclick="toggleMenu()" style="font-size:30px;cursor:pointer;">☰</span>
 
-```
-<img src="123.png.png" alt="Logo">
+  <img src="123.png.png" alt="Logo">
 
 <span class="title">কনকপুর তরুণ সংঘ</span>
+
+  <label class="switch">
+    <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+    <span class="slider"></span>
+  </label>
+</div>
+
 
 <label class="switch">
     <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
@@ -220,38 +226,29 @@ ESTD: 1965 | Reg. No: S/2L/2615
 </div>
 
 <script>
-function toggleMenu()
-    function toggleDarkMode() {
+function toggleMenu() {
+document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleDarkMode() {
 document.body.classList.toggle("dark-mode");
 
-```
 const isDark = document.body.classList.contains("dark-mode");
 localStorage.setItem("darkMode", isDark);
 
 document.getElementById("darkToggle").checked = isDark;
-```
-
 }
 
-window.addEventListener("load", function () {
+window.onload = function () {
 const isDark = localStorage.getItem("darkMode") === "true";
 
-```
 if (isDark) {
-    document.body.classList.add("dark-mode");
+document.body.classList.add("dark-mode");
 }
 
-const toggle = document.getElementById("darkToggle");
-if (toggle) {
-    toggle.checked = isDark;
-}
-```
+document.getElementById("darkToggle").checked = isDark;
+};
 
-});
-
-{
-    document.getElementById("menu").classList.toggle("active");
-}
 </script>
 <footer style="background:#ADD8E6; color:#000000; text-align:center; padding:15px; margin-top:40px; font-size:12px;">
   <p>© 2026 Kanakpur Tarun Sangha. All Rights Reserved.</p>
