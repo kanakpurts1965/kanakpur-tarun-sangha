@@ -67,6 +67,20 @@ footer{
     margin-top:40px;
     font-size:12px;
 }
+    .dark-mode {
+background-color: #121212;
+color: white;
+}
+
+.dark-mode .content {
+background-color: #121212;
+color: white;
+}
+
+.dark-mode .sidebar {
+background-color: #000;
+}
+
 </style>
 
 </head>
@@ -79,6 +93,9 @@ footer{
 <img src="123.png.png">
 
 <span style="font-size:22px;font-weight:bold;">কনকপুর তরুণ সংঘ</span>
+<button onclick="toggleDarkMode()" style="margin-left:auto;">
+  🌙
+</button>
 
 </div>
 
@@ -123,6 +140,9 @@ Registration No: S/2L/2615
   </a>
 
 </footer>
+function toggleDarkMode() {
+document.body.classList.toggle("dark-mode");
+}
 
 
 <script>
