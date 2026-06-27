@@ -562,3 +562,41 @@ max-width:95%;
 
 }
 
+/* ===========================
+   SIDEBAR HEADER
+=========================== */
+
+.sidebar-header{
+    text-align:center;
+    padding:20px 10px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.sidebar-logo{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:3px solid #ffffff;
+    margin:auto;
+}
+
+.sidebar-title{
+    color:#ffffff;
+    font-size:20px;
+    margin-top:12px;
+    font-weight:bold;
+    line-height:1.3;
+}
+
+@media(max-width:768px){
+
+.sidebar-logo{
+    width:70px;
+    height:70px;
+}
+
+.sidebar-title{
+    font-size:18px;
+}
+
+}
