@@ -142,6 +142,7 @@ MAIN CONTENT
 
 <main class="content">
     <div id="greeting" class="greeting-box"></div>
+    <div id="liveDateTime" class="live-date-time"></div>
 <!-- ===========================
 HOME PAGE
 =========================== -->
@@ -753,6 +754,37 @@ box.innerHTML = "🌙 শুভ সন্ধ্যা! আমাদের ওয
 }
 
 updateGreeting();
+
+</script>
+    <script>
+
+function updateClock(){
+
+const now = new Date();
+
+const date = now.toLocaleDateString('bn-BD',{
+
+weekday:'long',
+
+year:'numeric',
+
+month:'long',
+
+day:'numeric'
+
+});
+
+const time = now.toLocaleTimeString('bn-BD');
+
+document.getElementById("liveDateTime").innerHTML =
+
+"📅 " + date + " | 🕒 " + time;
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
 
 </script>
 </body>
