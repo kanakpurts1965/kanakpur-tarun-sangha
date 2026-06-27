@@ -885,17 +885,18 @@ font-size:14px;
 .notice-scroll{
     display:inline-block;
     white-space:nowrap;
-    will-change:transform;
+    padding-left:100%;
+    animation:noticeMove 15s linear infinite;
 }
 
 @keyframes noticeMove{
 
-0%{
+from{
 transform:translateX(0);
 }
 
-100%{
-transform:translateX(-200%);
+to{
+transform:translateX(-100%);
 }
 
 }
