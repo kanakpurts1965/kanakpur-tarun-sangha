@@ -226,11 +226,12 @@ try{
 
 const response = await fetch(scriptURL,{
 method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify(data)
-});
+body:new URLSearchParams({
+name:data.name,
+contact:data.contact,
+comment:data.comment,
+page:data.page
+})
 
 const result = await response.json();
 
