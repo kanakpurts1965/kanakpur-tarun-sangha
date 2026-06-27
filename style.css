@@ -212,3 +212,64 @@ width:42%;
 }
 
 }
+/* ===========================
+   COMMENT BOX
+=========================== */
+
+.comment-box{
+display:flex;
+justify-content:center;
+width:100%;
+margin:30px 0;
+}
+
+.comment-form{
+width:100%;
+max-width:550px;
+}
+
+.comment-form p{
+font-weight:bold;
+margin:15px 0 8px;
+}
+
+.comment-form input,
+.comment-form textarea{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+box-sizing:border-box;
+font-size:16px;
+}
+
+.comment-form textarea{
+height:100px;
+resize:vertical;
+}
+
+.comment-btn{
+text-align:center;
+margin-top:20px;
+}
+
+.comment-btn button{
+background:#8B0000;
+color:white;
+padding:12px 30px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.comment-btn button:hover{
+background:#a00000;
+}
+
+#msg{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+}
