@@ -702,6 +702,31 @@ fadeObserver.observe(item);
 });
 
 </script>
+    <script>
+
+const ticker = document.querySelector(".notice-scroll");
+
+let x = window.innerWidth;
+
+function moveTicker(){
+
+    x--;
+
+    ticker.style.transform = `translateX(${x}px)`;
+
+    if(x < -ticker.offsetWidth){
+
+        x = window.innerWidth;
+
+    }
+
+    requestAnimationFrame(moveTicker);
+
+}
+
+moveTicker();
+
+</script>
 </body>
 
 </html>
