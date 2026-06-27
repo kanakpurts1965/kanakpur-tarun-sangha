@@ -438,7 +438,10 @@ hr{
     font-size:18px;
     font-weight:bold;
 }
-
+.stats-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
 /* =====================================================
    OFFICE BEARERS
 ===================================================== */
