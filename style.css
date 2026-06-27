@@ -876,25 +876,27 @@ font-size:14px;
     white-space:nowrap;
 }
 
+.notice-text{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
 .notice-scroll{
     display:inline-block;
     white-space:nowrap;
-    animation:scrollNotice 20s linear infinite;
-}
-
-.notice-scroll span{
-    display:inline-block;
     padding-left:100%;
+    animation:noticeMove 18s linear infinite;
 }
 
-@keyframes scrollNotice{
+@keyframes noticeMove{
 
 0%{
 transform:translateX(0);
 }
 
 100%{
-transform:translateX(-100%);
+transform:translateX(-200%);
 }
 
 }
