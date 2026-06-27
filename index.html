@@ -208,5 +208,51 @@ window.onload=function(){
  document.getElementById('darkToggle').checked=d;
 }
 </script>
+    <script>
+const scriptURL = "https://script.google.com/macros/s/AKfycby92Qi49qhcf7vVxlx_-s1I2TEWdB4ZlI5n3BgwjkVRJ4E18k4YHaZc-lXzPuYQPQ2Z/exec";
+
+document.getElementById("commentForm").addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const data = {
+name: document.getElementById("name").value,
+contact: document.getElementById("contact").value,
+comment: document.getElementById("comment").value,
+page: "Home"
+};
+
+try{
+
+const response = await fetch(scriptURL,{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+});
+
+const result = await response.json();
+
+if(result.success){
+
+document.getElementById("msg").innerHTML="✅ আপনার মন্তব্য সফলভাবে পাঠানো হয়েছে।";
+
+document.getElementById("commentForm").reset();
+
+}else{
+
+document.getElementById("msg").innerHTML="❌ মন্তব্য পাঠানো যায়নি।";
+
+}
+
+}catch(error){
+
+document.getElementById("msg").innerHTML="⚠️ Server Error!";
+
+}
+
+});
+</script>
 </body>
 </html>
