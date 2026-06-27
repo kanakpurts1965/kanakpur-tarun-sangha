@@ -649,6 +649,33 @@ behavior:"smooth"
 }
 
 </script>
+    <script>
+
+const fadeElements = document.querySelectorAll(".fade-up");
+
+const fadeObserver = new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.20
+});
+
+fadeElements.forEach(function(item){
+
+fadeObserver.observe(item);
+
+});
+
+</script>
 </body>
 
 </html>
