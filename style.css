@@ -306,7 +306,7 @@ input:checked + .slider:before{
 
     margin:auto;
 
-    padding:20px;
+    padding:140px 20px 20px;
 
 }
 
@@ -800,19 +800,29 @@ transform:scale(1.1);
 
 .notice-bar{
 
-display:flex;
+    position:fixed;
 
-align-items:center;
+    top:70px;
 
-background:#fff8dc;
+    left:0;
 
-border-top:2px solid #8B0000;
+    width:100%;
 
-border-bottom:2px solid #8B0000;
+    z-index:999;
 
-margin-bottom:20px;
+    display:flex;
 
-overflow:hidden;
+    align-items:center;
+
+    background:#fff8dc;
+
+    border-top:2px solid #8B0000;
+
+    border-bottom:2px solid #8B0000;
+
+    overflow:hidden;
+
+    height:46px;
 
 }
 
