@@ -726,6 +726,35 @@ function moveTicker(){
 moveTicker();
 
 </script>
+    <script>
+
+function updateGreeting(){
+
+const hour = new Date().getHours();
+
+const box = document.getElementById("greeting");
+
+if(hour >= 5 && hour < 12){
+
+box.innerHTML = "🌞 শুভ সকাল! কনকপুর তরুণ সংঘের ওয়েবসাইটে আপনাকে স্বাগতম।";
+
+}
+else if(hour >= 12 && hour < 17){
+
+box.innerHTML = "🌤️ শুভ অপরাহ্ন! আপনার দিনটি সুন্দর কাটুক।";
+
+}
+else{
+
+box.innerHTML = "🌙 শুভ সন্ধ্যা! আমাদের ওয়েবসাইটে আসার জন্য ধন্যবাদ।";
+
+}
+
+}
+
+updateGreeting();
+
+</script>
 </body>
 
 </html>
