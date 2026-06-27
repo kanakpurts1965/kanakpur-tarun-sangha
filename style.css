@@ -1,9 +1,10 @@
-/* ==========================================
+/* =====================================================
    KANAKPUR TARUN SANGHA
-   STYLE.CSS - PART 1 (BASE)
-========================================== */
+   OFFICIAL WEBSITE
+   STYLE.CSS (PART 1)
+===================================================== */
 
-/* Reset */
+/* ========== RESET ========== */
 
 *{
     margin:0;
@@ -11,33 +12,47 @@
     box-sizing:border-box;
 }
 
-/* Body */
+/* ========== BODY ========== */
 
 body{
+
     font-family:Arial,Helvetica,sans-serif;
+
     background:#f5f5f5;
+
     color:#222;
-    line-height:1.6;
+
+    line-height:1.7;
+
 }
 
-/* Images */
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* Links */
+/* ========== LINKS ========== */
 
 a{
+
     text-decoration:none;
+
 }
 
-/* ==========================================
-   HEADER
-========================================== */
+/* ========== IMAGES ========== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ========== HEADER ========== */
 
 .topbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
 
     width:100%;
 
@@ -49,92 +64,57 @@ a{
 
     align-items:center;
 
+    gap:15px;
+
     padding:12px 18px;
 
-    gap:12px;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:999;
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
 
 }
 
-.topbar img{
+/* ===== MENU BUTTON ===== */
 
-    width:50px;
+.menu-btn{
 
-    height:50px;
+    font-size:30px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+
+    width:48px;
+
+    height:48px;
 
     border-radius:50%;
 
 }
 
+/* ===== TITLE ===== */
+
 .title{
-
-    font-size:24px;
-
-    font-weight:bold;
 
     flex:1;
 
-}
+    font-size:22px;
 
-/* ==========================================
-   SIDEBAR
-========================================== */
+    font-weight:bold;
 
-.sidebar{
+    white-space:nowrap;
 
-    position:fixed;
+    overflow:hidden;
 
-    top:0;
-
-    left:-270px;
-
-    width:260px;
-
-    height:100%;
-
-    background:#222;
-
-    transition:.35s;
-
-    overflow-y:auto;
-
-    z-index:1000;
-
-    padding-top:25px;
+    text-overflow:ellipsis;
 
 }
 
-.sidebar.active{
-
-    left:0;
-
-}
-
-.sidebar a{
-
-    display:block;
-
-    color:#fff;
-
-    padding:15px 22px;
-
-    font-size:17px;
-
-    transition:.3s;
-
-}
-
-.sidebar a:hover{
-
-    background:#8B0000;
-/* ==========================================
-   DARK MODE SWITCH
-========================================== */
+/* ========== DARK SWITCH ========== */
 
 .switch{
 
@@ -142,7 +122,7 @@ a{
 
     display:inline-block;
 
-    width:54px;
+    width:52px;
 
     height:28px;
 
@@ -200,20 +180,131 @@ input:checked + .slider{
 
 input:checked + .slider:before{
 
-    transform:translateX(26px);
+    transform:translateX(24px);
 
 }
 
+/* ========== SIDEBAR ========== */
 
+.sidebar{
 
+    position:fixed;
 
-/* ==========================================
-   MAIN CONTENT
-========================================== */
+    left:-280px;
+
+    top:0;
+
+    width:270px;
+
+    height:100%;
+
+    background:#222;
+
+    overflow-y:auto;
+
+    transition:.35s;
+
+    z-index:1000;
+
+    box-shadow:5px 0 15px rgba(0,0,0,.30);
+
+}
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+/* ===== SIDEBAR HEADER ===== */
+
+.sidebar-header{
+
+    text-align:center;
+
+    padding:25px 15px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.sidebar-logo{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    border:4px solid #fff;
+
+    margin:auto;
+
+}
+
+.sidebar-title{
+
+    color:#fff;
+
+    margin-top:15px;
+
+    font-size:22px;
+
+}
+
+.sidebar-subtitle{
+
+    color:#ddd;
+
+    margin-top:6px;
+
+    font-size:14px;
+
+}
+
+/* ===== MENU ===== */
+
+.sidebar a{
+
+    display:block;
+
+    color:#fff;
+
+    padding:15px 22px;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#8B0000;
+
+}
+
+/* ===== SIDEBAR FOOTER ===== */
+
+.sidebar-footer{
+
+    text-align:center;
+
+    color:#ccc;
+
+    font-size:12px;
+
+    padding:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    margin-top:20px;
+
+}
+
+/* ========== MAIN CONTENT ========== */
 
 .content{
-
-    width:100%;
 
     max-width:1200px;
 
@@ -223,9 +314,7 @@ input:checked + .slider:before{
 
 }
 
-/* ==========================================
-   VIDEO
-========================================== */
+/* ========== VIDEO ========== */
 
 video{
 
@@ -233,39 +322,27 @@ video{
 
     border-radius:12px;
 
-    box-shadow:0 5px 18px rgba(0,0,0,.18);
+    box-shadow:0 6px 20px rgba(0,0,0,.20);
 
 }
 
-/* ==========================================
-   HEADINGS
-========================================== */
+/* ========== HEADINGS ========== */
 
-h1{
-
-    text-align:center;
+h1,h2{
 
     color:#8B0000;
+
+    text-align:center;
 
     margin:25px 0;
 
 }
 
-h2{
-
-    text-align:center;
-
-    color:#8B0000;
-
-    margin:25px 0;
-
-}
-
-/* ==========================================
-   HR
-========================================== */
+/* ========== HR ========== */
 
 hr{
+
+    margin:40px 0;
 
     border:none;
 
@@ -273,13 +350,9 @@ hr{
 
     background:#ddd;
 
-    margin:35px 0;
-
 }
 
-/* ==========================================
-   DARK MODE
-========================================== */
+/* ========== DARK MODE ========== */
 
 .dark-mode{
 
@@ -308,295 +381,14 @@ hr{
 }
 
 .dark-mode h1,
-
 .dark-mode h2{
 
-    color:#ffffff;
+    color:#fff;
 
 }
 
 .dark-mode hr{
 
-    background:#333;
-
-}
-
-.dark-mode footer{
-
-    background:#1f1f1f!important;
-
-    color:#fff!important;
-
-}
-/* ==========================================
-STATISTICS
-========================================== */
-
-.stats-title{
-text-align:center;
-color:#8B0000;
-font-size:32px;
-margin:40px 0 25px;
-}
-
-.stats-container{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:40px;
-}
-
-.stats-card{
-width:170px;
-background:#fff;
-border:2px solid #8B0000;
-border-radius:18px;
-padding:20px;
-text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,.15);
-transition:.3s;
-}
-
-.stats-card:hover{
-transform:translateY(-6px);
-}
-
-.stats-card h3{
-font-size:38px;
-}
-
-.stats-card h2{
-color:#8B0000;
-margin:10px 0;
-}
-
-.stats-card p{
-font-weight:bold;
-}
-
-/* ==========================================
-OFFICE BEARERS
-========================================== */
-
-.office-title{
-text-align:center;
-color:#8B0000;
-font-size:32px;
-margin:40px 0 25px;
-}
-
-.office-container{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:40px;
-}
-
-.office-card{
-width:220px;
-background:#fff;
-border:2px solid #8B0000;
-border-radius:18px;
-padding:18px;
-text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,.15);
-transition:.3s;
-}
-
-.office-card:hover{
-transform:translateY(-6px);
-}
-
-.office-card img{
-width:130px;
-height:130px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #8B0000;
-margin:auto;
-}
-
-.ribbon{
-display:inline-block;
-background:#8B0000;
-color:#fff;
-padding:8px 16px;
-border-radius:6px;
-margin:15px 0;
-font-weight:bold;
-}
-
-.office-card h3{
-font-size:22px;
-color:#1b2b5a;
-}
-
-/* ==========================================
-COMMENT BOX
-========================================== */
-
-.comment-box{
-display:flex;
-justify-content:center;
-margin:40px 0;
-}
-
-.comment-form{
-width:100%;
-max-width:550px;
-}
-
-.comment-form p{
-font-weight:bold;
-margin:15px 0 8px;
-}
-
-.comment-form input,
-.comment-form textarea{
-width:100%;
-padding:12px;
-border:2px solid #ccc;
-border-radius:8px;
-font-size:16px;
-}
-
-.comment-form textarea{
-height:120px;
-}
-
-.comment-btn{
-text-align:center;
-margin-top:20px;
-}
-
-.comment-btn button{
-background:#8B0000;
-color:#fff;
-border:none;
-border-radius:8px;
-padding:12px 30px;
-font-size:17px;
-cursor:pointer;
-}
-
-#msg{
-text-align:center;
-margin-top:15px;
-font-weight:bold;
-}
-
-/* ==========================================
-MOBILE
-========================================== */
-@media (max-width:768px){
-
-/* ===== Office Bearers ===== */
-
-.office-container{
-display:flex;
-flex-wrap:nowrap;
-justify-content:space-between;
-gap:4px;
-}
-
-.office-card{
-width:32%;
-padding:6px;
-border-radius:8px;
-}
-
-.office-card img{
-width:55px;
-height:55px;
-margin:auto;
-border:2px solid #8B0000;
-}
-
-.ribbon{
-font-size:9px;
-padding:3px 5px;
-margin:6px auto;
-}
-
-.office-card h3{
-font-size:10px;
-line-height:1.2;
-margin-top:5px;
-}
-
-/* ===== Statistics ===== */
-
-.stats-container{
-display:flex;
-flex-wrap:nowrap;
-justify-content:space-between;
-gap:4px;
-}
-
-.stats-card{
-width:24%;
-padding:6px 3px;
-}
-
-.stats-card h3{
-font-size:18px;
-}
-
-.stats-card h2{
-font-size:13px;
-margin:4px 0;
-}
-
-.stats-card p{
-font-size:9px;
-line-height:1.2;
-}
-
-/* ===== Comment Box ===== */
-
-.comment-form{
-max-width:95%;
-}
-
-}
-
-/* ===========================
-   SIDEBAR HEADER
-=========================== */
-
-.sidebar-header{
-    text-align:center;
-    padding:20px 10px;
-    border-bottom:1px solid rgba(255,255,255,.2);
-}
-
-.sidebar-logo{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    border:3px solid #ffffff;
-    margin:auto;
-}
-
-.sidebar-title{
-    color:#ffffff;
-    font-size:20px;
-    margin-top:12px;
-    font-weight:bold;
-    line-height:1.3;
-}
-
-@media(max-width:768px){
-
-.sidebar-logo{
-    width:70px;
-    height:70px;
-}
-
-.sidebar-title{
-    font-size:18px;
-}
+    background:#444;
 
 }
