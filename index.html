@@ -545,7 +545,75 @@ msg.innerHTML="⚠️ Server Error!";
 });
 
 </script>
+<script>
 
+let statsStarted = false;
+
+function animateCounter(id, target, suffix = "") {
+
+    let count = 0;
+
+    const element = document.getElementById(id);
+
+    const step = Math.max(1, Math.ceil(target / 80));
+
+    const timer = setInterval(() => {
+
+        count += step;
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(timer);
+
+        }
+
+        element.innerHTML = count + suffix;
+
+    }, 20);
+
+}
+
+function startStatistics() {
+
+    if (statsStarted) return;
+
+    statsStarted = true;
+
+    animateCounter("yearCounter", 1965);
+
+    animateCounter("memberCounter", 165, "+");
+
+    animateCounter("eventCounter", 295, "+");
+
+    animateCounter("serviceCounter", 155, "+");
+
+}
+
+const statsSection = document.getElementById("statistics");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startStatistics();
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.4
+
+});
+
+observer.observe(statsSection);
+
+</script>
 </body>
 
 </html>
