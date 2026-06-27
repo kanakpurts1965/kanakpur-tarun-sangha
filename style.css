@@ -116,41 +116,6 @@ font-weight:bold;
 
 }
 
-@media(max-width:768px){
-
-.office-card{
-
-width:92%;
-
-}
-
-.office-title{
-
-font-size:28px;
-
-}
-
-.office-card img{
-
-width:140px;
-
-height:140px;
-
-}
-
-.ribbon{
-
-font-size:20px;
-
-}
-
-.office-card h3{
-
-font-size:24px;
-
-}
-
-}
 
 /* ===========================
    Statistics Section
@@ -289,6 +254,69 @@ width:42%;
 
 .comment-form{
     max-width:92%;
+}
+
+}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+/* Office Bearers */
+
+.office-container{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    flex-wrap:nowrap;
+}
+
+.office-card{
+    width:31%;
+    padding:10px;
+}
+
+.office-card img{
+    width:75px;
+    height:75px;
+    border:3px solid #8B0000;
+}
+
+.ribbon{
+    font-size:13px;
+    padding:5px 8px;
+}
+
+.office-card h3{
+    font-size:14px;
+    margin-top:8px;
+}
+
+/* Statistics */
+
+.stats-container{
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    flex-wrap:nowrap;
+}
+
+.stats-card{
+    width:23%;
+    padding:10px;
+}
+
+.stats-card h3{
+    font-size:24px;
+}
+
+.stats-card h2{
+    font-size:18px;
+}
+
+.stats-card p{
+    font-size:12px;
 }
 
 }
