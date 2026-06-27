@@ -153,59 +153,8 @@ input:checked + .slider:before{
 
 }
 
-/* ==========================================
-   SIDEBAR
-========================================== */
 
-.sidebar{
 
-    position:fixed;
-
-    top:0;
-
-    left:-270px;
-
-    width:260px;
-
-    height:100%;
-
-    background:#222;
-
-    transition:.35s;
-
-    overflow-y:auto;
-
-    z-index:1000;
-
-    padding-top:25px;
-
-}
-
-.sidebar.active{
-
-    left:0;
-
-}
-
-.sidebar a{
-
-    display:block;
-
-    color:#fff;
-
-    padding:15px 22px;
-
-    font-size:17px;
-
-    transition:.3s;
-
-}
-
-.sidebar a:hover{
-
-    background:#8B0000;
-
-}
 
 /* ==========================================
    MAIN CONTENT
