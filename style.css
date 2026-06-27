@@ -490,7 +490,7 @@ font-weight:bold;
 /* ==========================================
 MOBILE
 ========================================== */
-
+@media (max-width:768px){
 
 /* ===== Office Bearers ===== */
 
@@ -502,7 +502,7 @@ gap:4px;
 }
 
 .office-card{
-width:33%;
+width:32%;
 padding:6px;
 border-radius:8px;
 }
@@ -536,7 +536,7 @@ gap:4px;
 }
 
 .stats-card{
-width:25%;
+width:24%;
 padding:6px 3px;
 }
 
