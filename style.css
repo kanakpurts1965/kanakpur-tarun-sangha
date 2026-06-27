@@ -328,3 +328,238 @@ hr{
     color:#fff!important;
 
 }
+/* ==========================================
+STATISTICS
+========================================== */
+
+.stats-title{
+text-align:center;
+color:#8B0000;
+font-size:32px;
+margin:40px 0 25px;
+}
+
+.stats-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.stats-card{
+width:170px;
+background:#fff;
+border:2px solid #8B0000;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.stats-card:hover{
+transform:translateY(-6px);
+}
+
+.stats-card h3{
+font-size:38px;
+}
+
+.stats-card h2{
+color:#8B0000;
+margin:10px 0;
+}
+
+.stats-card p{
+font-weight:bold;
+}
+
+/* ==========================================
+OFFICE BEARERS
+========================================== */
+
+.office-title{
+text-align:center;
+color:#8B0000;
+font-size:32px;
+margin:40px 0 25px;
+}
+
+.office-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.office-card{
+width:220px;
+background:#fff;
+border:2px solid #8B0000;
+border-radius:18px;
+padding:18px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.office-card:hover{
+transform:translateY(-6px);
+}
+
+.office-card img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #8B0000;
+margin:auto;
+}
+
+.ribbon{
+display:inline-block;
+background:#8B0000;
+color:#fff;
+padding:8px 16px;
+border-radius:6px;
+margin:15px 0;
+font-weight:bold;
+}
+
+.office-card h3{
+font-size:22px;
+color:#1b2b5a;
+}
+
+/* ==========================================
+COMMENT BOX
+========================================== */
+
+.comment-box{
+display:flex;
+justify-content:center;
+margin:40px 0;
+}
+
+.comment-form{
+width:100%;
+max-width:550px;
+}
+
+.comment-form p{
+font-weight:bold;
+margin:15px 0 8px;
+}
+
+.comment-form input,
+.comment-form textarea{
+width:100%;
+padding:12px;
+border:2px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+.comment-form textarea{
+height:120px;
+}
+
+.comment-btn{
+text-align:center;
+margin-top:20px;
+}
+
+.comment-btn button{
+background:#8B0000;
+color:#fff;
+border:none;
+border-radius:8px;
+padding:12px 30px;
+font-size:17px;
+cursor:pointer;
+}
+
+#msg{
+text-align:center;
+margin-top:15px;
+font-weight:bold;
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+/* ===== Office Bearers ===== */
+
+.office-container{
+display:flex;
+flex-wrap:nowrap;
+justify-content:space-between;
+gap:4px;
+}
+
+.office-card{
+width:33%;
+padding:6px;
+border-radius:8px;
+}
+
+.office-card img{
+width:55px;
+height:55px;
+margin:auto;
+border:2px solid #8B0000;
+}
+
+.ribbon{
+font-size:9px;
+padding:3px 5px;
+margin:6px auto;
+}
+
+.office-card h3{
+font-size:10px;
+line-height:1.2;
+margin-top:5px;
+}
+
+/* ===== Statistics ===== */
+
+.stats-container{
+display:flex;
+flex-wrap:nowrap;
+justify-content:space-between;
+gap:4px;
+}
+
+.stats-card{
+width:25%;
+padding:6px 3px;
+}
+
+.stats-card h3{
+font-size:18px;
+}
+
+.stats-card h2{
+font-size:13px;
+margin:4px 0;
+}
+
+.stats-card p{
+font-size:9px;
+line-height:1.2;
+}
+
+/* ===== Comment Box ===== */
+
+.comment-form{
+max-width:95%;
+}
+
+}
+
