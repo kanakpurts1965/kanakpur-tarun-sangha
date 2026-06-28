@@ -781,6 +781,72 @@ updateClock();
 setInterval(updateClock,1000);
 
 </script>
+    <script>
+
+const commentsURL = https://script.google.com/macros/s/AKfycby92Qi49qhcf7vVxlx_-s1I2TEWdB4ZlI5n3BgwjkVRJ4E18k4YHaZc-lXzPuYQPQ2Z/exec
+
+async function loadComments(){
+
+    try{
+
+        const response = await fetch(commentsURL);
+
+        const comments = await response.json();
+
+        const container = document.getElementById("comments");
+
+        if(comments.length===0){
+
+            container.innerHTML = `
+            <div class="no-comment">
+                <h3>👤 এখনও কোনো মন্তব্য আসেনি</h3>
+                <p>আপনিই প্রথম মন্তব্য করুন।</p>
+            </div>`;
+
+            return;
+
+        }
+
+        container.innerHTML = "";
+
+        comments.forEach(item=>{
+
+            container.innerHTML += `
+
+            <div class="comment-card">
+
+                <div class="comment-name">
+                    👤 ${item.name}
+                </div>
+
+                <div class="comment-date">
+                    🕒 ${item.time}
+                </div>
+
+                <div class="comment-text">
+                    ${item.comment}
+                </div>
+
+            </div>
+
+            `;
+
+        });
+
+    }
+
+    catch(error){
+
+        document.getElementById("comments").innerHTML =
+        "<div class='loading-comments'>❌ মন্তব্য লোড করা যায়নি।</div>";
+
+    }
+
+}
+
+loadComments();
+
+</script>
 </body>
 
 </html>
